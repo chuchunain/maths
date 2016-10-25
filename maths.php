@@ -19,7 +19,7 @@ function mediane ($t)
 {
 	sort($t, SORT_NUMERIC) or die("tri échoué !");
 	$n = floor ((count($t)+1)/2);
-	if (count($t)%2 == 0) return (moyenne(array_slice($t, 0, ($n-1))) + moyenne(array_slice($t, $n)))/2;
+	if (count($t)%2 == 0) return (moyenne(array_slice($t, 0, $n)) + moyenne(array_slice($t, $n)))/2;
 	else return $t[$n-1];
 }
 
